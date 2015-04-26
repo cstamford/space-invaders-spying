@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="android-support-v4">
+    <archive path="A:/Development/android_workspace/SpaceInvaders/libs/android-support-v4.jar" />
+  </library>
+  <library name="android-support-v4-2cefd45ff590225bb643b14057a90204">
+    <archive path="A:/Development/android_workspace/SpaceInvaders/bin/dexedLibs/android-support-v4-2cefd45ff590225bb643b14057a90204.jar" />
+  </library>
+</eclipse-userlibraries>
+

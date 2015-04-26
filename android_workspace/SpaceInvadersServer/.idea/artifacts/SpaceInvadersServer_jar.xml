@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SpaceInvadersServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SpaceInvadersServer_jar</output-path>
+    <root id="archive" name="SpaceInvadersServer.jar">
+      <element id="module-output" name="SpaceInvadersShared" />
+      <element id="module-output" name="SpaceInvadersServer" />
+      <element id="library" level="project" name="sqlite-jdbc-3.7.2" />
+    </root>
+  </artifact>
+</component>

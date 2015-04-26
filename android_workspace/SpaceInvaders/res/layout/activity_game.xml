@@ -1,0 +1,77 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    tools:context=".GameActivity" >
+
+    <LinearLayout 
+	    android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight=".45"
+	    android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".50"
+            android:gravity="center"
+            android:text="@string/level_label_game"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+       	<TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".50"
+            android:gravity="center"
+            android:text="@string/score_label_game"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    	
+  	</LinearLayout>
+    
+    
+    <com.cst.spaceinvaders.game.views.GameView
+        android:id="@+id/gameView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight=".10"
+    />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_weight=".45"
+   	    android:orientation="horizontal"
+    	tools:context=".GameActivity" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".33"
+            android:text="@string/left_button_game" 
+      	   	android:onClick="onClickLeft" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".33"
+            android:text="@string/fire_button_game" 
+      	   	android:onClick="onClickFire" />
+        
+       <Button
+            android:id="@+id/button3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".33"
+            android:text="@string/right_button_game"
+            android:onClick="onClickRight" />
+    	
+  	</LinearLayout>
+
+</LinearLayout>
